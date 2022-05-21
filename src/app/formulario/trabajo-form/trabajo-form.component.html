@@ -1,0 +1,91 @@
+
+<h1 mat-dialog-title>DATOS CURSO</h1>
+<div mat-dialog-content style="font-size:14px">
+    <div class="container">
+    <form [formGroup]="trabajoForm">   
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre de la Empresa</mat-label>
+            <input matInput placeholder="Ingrese Nombre de la Empresa" formControlName="nombreTrabajo">
+            <mat-icon matSuffix>account_box</mat-icon>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre del Cargo</mat-label>
+            <input matInput placeholder="Ingrese nombre Cargo que ocupa" formControlName="cargoTrabajo">
+            <mat-icon matSuffix>work</mat-icon>
+        </mat-form-field>
+        
+
+        <mat-form-field appearance="outline">
+            <mat-label>Descripcion de Cargo</mat-label>
+            <textarea matInput type="text" placeholder="Ingrese descripcion del Cargo" formControlName="descTareasTrabajo" cdkTextareaAutosize [cdkAutosizeMinRows]="4"[cdkAutosizeMaxRows]="5" ></textarea> 
+            <mat-icon matSuffix>chrome_reader_mode</mat-icon>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Elegir Fecha de Ingreso del Trabajo</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="fechaIngresoTrabajo">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        
+
+          <mat-form-field appearance="outline">
+            <mat-label>Elegir Fecha de Egreso del Trabajo</mat-label>
+            <input matInput [matDatepicker]="pickerr" formControlName="fechaEgresoTrabajo">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="pickerr"></mat-datepicker-toggle>
+            <mat-datepicker #pickerr></mat-datepicker>
+          </mat-form-field>
+       
+
+        <!-- <mat-form-field appearance="outline">
+            <mat-label>Fecha fin de curso</mat-label>
+            <input matInput placeholder="Ingrese fecha fin de curso" formControlName="fechaFinCurso">
+            <mat-icon matSuffix>business</mat-icon>
+        </mat-form-field> -->
+        
+        
+
+        <mat-form-field appearance="outline">
+            <mat-label>URL Foto Curso</mat-label>
+            <input matInput placeholder="Ingrese URL del logo de la Empresa" formControlName="fotoTrabajoEmpresa">
+            <mat-icon matSuffix> link icon</mat-icon>
+        </mat-form-field>
+        <div>
+            <div class="fileUpload btn btn-primary">
+            <span>Subir Foto Trabajo</span>
+            <input id="uploadBtn" type="file" class="upload" accept=".jpg"  (change)="subirImagenTrabajo($event)">
+            </div>
+        <img src="{{imagenesTrabajo[0]}}" width="50px">
+          <div *ngIf="fileTrabajo" class="progress my-3">
+            <div
+              class="progress-bar progress-bar-info progress-bar-striped"
+              role="progressbar"
+              attr.aria-valuenow="{{ progressTrabajo }}"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              [ngStyle]="{ width: progressTrabajo + '%' }"
+            >
+              {{ progressTrabajo }}%
+            </div>
+          </div>
+    
+    
+        </div>
+
+       
+          
+
+    </form>
+    </div>
+    <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+        <button mat-raised-button color="primary"primary (click)="agregarTrabajo()" [disabled]="(trabajoForm.invalid)||(banderaCargarTrabajo)">{{actionBtn}}</button>
+    </div>
+</div>   
+
+
+
+

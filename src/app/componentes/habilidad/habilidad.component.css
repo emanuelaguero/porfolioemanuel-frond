@@ -1,0 +1,31 @@
+
+#box {
+  background-color: #d7e5f1;
+  width: 100%;
+  align-content: center;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#box2 {
+  background-color: #a5c9e7;
+ 
+  align-content: center;
+  border-radius: 0px 0px 20px 20px;
+  margin-bottom: 20px;
+}
+#box3 {
+  background-color: #d7e5f1;
+  align-content: center;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding-bottom: 4px;
+}
+
+.ref{
+  align-content: center;
+  margin-bottom: 20px;
+  font-size:medium;
+  margin: 10px 10px 10px 10px;
+  
+  font-weight: bold;
+}

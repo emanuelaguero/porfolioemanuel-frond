@@ -1,0 +1,36 @@
+mat-form-field{
+    width:100%;
+  
+}
+mat-form-field.mat-form-field {
+  font-size: 14px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    
+  }
+  ::ng-deep .snackbarStylo {
+    color:rgb(9, 9, 9);
+    background: rgb(204, 231, 204);
+  }
+
+  ::ng-deep .snackbarStyloError {
+    color:rgb(9, 9, 9);
+    background: rgb(212, 69, 71);
+
+  }
+  .ref{
+    align-content: center;
+    margin-bottom: 20px;
+    font-size:medium;
+    margin: 10px 10px 10px 10px;
+    
+    
+  }

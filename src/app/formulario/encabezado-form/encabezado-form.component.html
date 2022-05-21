@@ -1,0 +1,130 @@
+
+<h1 mat-dialog-title>DATOS PERFIL</h1>
+<div mat-dialog-content style="font-size:14px">
+    <div class="container">
+    <form [formGroup]="perfilForm">   
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre y Apellido</mat-label>
+            <input matInput placeholder="Ingrese Nombre y Apellido" formControlName="personaNombre">
+            <mat-icon matSuffix>account_box</mat-icon>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Profesión</mat-label>
+            <input matInput placeholder="Ingrese Profesion" formControlName="personaProfesion">
+            <mat-icon matSuffix>work</mat-icon>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Direccion</mat-label>
+            <input matInput placeholder="Ingrese Direccion" formControlName="personaDireccion">
+            <mat-icon matSuffix>business</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Ingrese Mail" formControlName="personaEmail">
+            <mat-icon matSuffix>mail_outline</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefono</mat-label>
+            <input matInput placeholder="Ingrese Telefono" formControlName="personaTelefono">
+            <mat-icon matSuffix>call icon</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Link Pagina Web</mat-label>
+            <input matInput placeholder="Ingrese Link Pagina Web" formControlName="personaWeb">
+            <mat-icon matSuffix>web</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Perfil LinkedIn</mat-label>
+            <input matInput placeholder="Ingrese Link perfil LinkedIn" formControlName="personaLinkedin">
+            <mat-icon matSuffix>link</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>A cerca de mi</mat-label>
+            <textarea matInput type="text" placeholder="Ingrese Informacion sobre mi..." formControlName="personaAcerca" cdkTextareaAutosize [cdkAutosizeMinRows]="4"[cdkAutosizeMaxRows]="5" ></textarea> 
+            <mat-icon matSuffix>chrome_reader_mode</mat-icon>
+        </mat-form-field>
+        
+        
+
+        <mat-form-field appearance="outline">
+            <mat-label>URL Foto Perfil</mat-label>
+            <input matInput placeholder="Ingrese URL Foto Perfil" formControlName="personaFotoPerfil">
+            <mat-icon matSuffix> link icon</mat-icon>
+        </mat-form-field>
+        <div>
+                <div class="fileUpload btn btn-primary">
+                <span>Subir Foto Perfil</span>
+                <input id="uploadBtn" type="file" class="upload" accept=".jpg"  (change)="subirImagenPerfil($event)">
+                </div>
+            
+           
+            <img src="{{imagenesPerfil[0]}}" width="100px">
+            <div *ngIf="filePerfil" class="progress my-3">
+                <div
+                  class="progress-bar progress-bar-info progress-bar-striped"
+                  role="progressbar"
+                  attr.aria-valuenow="{{ progressPerfil }}"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  [ngStyle]="{ width: progressPerfil + '%' }"
+                >
+                  {{ progressPerfil }}%
+                </div>
+              </div>
+        </div>
+
+
+
+
+
+      
+        <mat-form-field appearance="outline">
+            <mat-label>URL Foto Portada</mat-label>
+            <input matInput placeholder="Ingrese URL Foto Portada" formControlName="personaFotoPortada">
+            <mat-icon matSuffix> link icon</mat-icon>
+        </mat-form-field>
+        <div>
+            <div class="fileUpload btn btn-primary">
+            <span>Subir Foto Portada</span>
+            <input id="uploadBtn" type="file" class="upload" accept=".jpg"  (change)="subirImagenPortada($event)">
+            </div>
+        <img src="{{imagenesPortada[0]}}" width="50px">
+          <div *ngIf="filePortada" class="progress my-3">
+            <div
+              class="progress-bar progress-bar-info progress-bar-striped"
+              role="progressbar"
+              attr.aria-valuenow="{{ progressPortada }}"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              [ngStyle]="{ width: progressPortada + '%' }"
+            >
+              {{ progressPortada }}%
+            </div>
+          </div>
+    
+    
+        </div>
+        
+    </form>
+    </div>
+    <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close id="btnCerrar">Cerrar</button>
+        <button mat-raised-button color="primary"primary (click)="agregarPersona()" [disabled]="(perfilForm.invalid)||(banderaCargarPerfil)">{{actionBtn}}</button>
+    </div>
+</div>   
+
+
+
+        
+    
+
+
+   
+        
+
+
+

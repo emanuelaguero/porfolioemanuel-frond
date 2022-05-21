@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>DATOS PROYECTO</h1>
+<div mat-dialog-content style="font-size:14px">
+    <div class="container">
+    <form [formGroup]="proyectoForm">   
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre de la Empresa</mat-label>
+            <input matInput placeholder="Ingrese Nombre de la Proyecto" formControlName="nombreProyecto">
+            <mat-icon matSuffix>account_box</mat-icon>
+        </mat-form-field>
+        
+     
+        
+
+        <mat-form-field appearance="outline">
+            <mat-label>Descripcion del Proyecto</mat-label>
+            <textarea matInput type="text" placeholder="Ingrese descripcion del Prouecto" formControlName="descProyecto" cdkTextareaAutosize [cdkAutosizeMinRows]="4"[cdkAutosizeMaxRows]="5" ></textarea> 
+            <mat-icon matSuffix>chrome_reader_mode</mat-icon>
+        </mat-form-field>
+        
+        
+
+        <mat-form-field appearance="outline">
+            <mat-label>URL Proyecto</mat-label>
+            <input matInput placeholder="Ingrese URL del Proyecto" formControlName="urlProyecto">
+            <mat-icon matSuffix> link icon</mat-icon>
+        </mat-form-field>
+
+
+       
+          
+
+    </form>
+    </div>
+    <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+        <button mat-raised-button color="primary"primary (click)="agregarProyecto()" [disabled]="proyectoForm.invalid">{{actionBtn}}</button>
+    </div>
+</div>   
+

@@ -1,0 +1,10 @@
+.sinBordes {
+    border-radius: 200px;
+    border: none;
+}
+.sinBordes td,th {
+ 
+    border: none;
+}
+
+

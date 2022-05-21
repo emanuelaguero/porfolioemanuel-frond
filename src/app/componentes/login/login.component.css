@@ -1,0 +1,48 @@
+.bodyLogin{
+
+
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+height: 600px;
+
+}
+
+.login{
+  border-radius: 10px;
+    width: 50%;
+    background-color: #f5f5f5;
+    text-align: center;
+    height: 70%;
+    width: 30%;
+    min-width: 300px;
+    padding: 20px;
+}
+.btnLogin{
+    width: 80%;
+}
+
+mat-form-field{
+    width:80%;
+  
+}
+mat-form-field.mat-form-field {
+  font-size: 14px;
+}
+
+
+  ::ng-deep .snackbarStylo {
+    color:rgb(9, 9, 9);
+    background: rgb(204, 231, 204);
+  }
+
+  ::ng-deep .snackbarStyloError {
+    color:rgb(9, 9, 9);
+    background: rgb(212, 69, 71);
+
+  }
+ .spinner{
+ margin: auto;
+ } 

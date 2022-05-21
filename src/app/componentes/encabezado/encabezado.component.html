@@ -1,0 +1,98 @@
+
+
+
+
+<div id="banner" class="container-fluid">
+  <img id="bannerImg" src="/assets/images/banArg.png" alt="argpprod">
+  
+  <button id="btnLogin" mat-raised-button color="warn" (click)="salirPorfolio()"><span class='material-icons'>login</span>Salir</button>
+  
+</div>
+<div class="mat-card" id="first-card"*ngFor="let persona of personas" >
+  <!-- <div id="profile-background" ngIf="miPorfolio"></div> -->
+  <div id="profile-background"  >
+    <img class="tamaño" src="{{persona.fotoPortada}}" style="height:250px ;">
+
+  </div>
+  <!-- <div id="info" style="padding:16px" *ngIf="miPorfolio"></div> -->
+  <div id="info" style="padding:16px" >
+      <div id="info-img" >
+        <div id="btnEditarPerfil" ><button   mat-icon-button color="primary" (click)="openEditEncabezado(persona)" type="button"  data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil fa-2x fa-lg">Modificar</i></button></div>
+       
+          <img class="profile-image" src="{{persona.fotoPerfil}}" (click)="openEditEncabezado(persona)">
+          
+       
+        </div>
+   
+      <div class="table-responsive-sm" style="vertical-align:middle; margin: 6px ">
+        <div class="row justify-content-md-center" >
+          <div class="col-5" ></div>
+          <div class="col-7 " style="background-color:#a5c9e7;" ><strong><center>Contacto</center></strong></div>
+        </div>
+        <div class="row">
+          <div class="col-5" >
+            <h1 id="tituloPerfil">{{persona.nombre}}</h1>
+          
+            <H2 id="subtituloPerfil">{{persona.profesion}}</H2>
+            
+            
+            
+          </div>
+          
+              <div class="col-3" style="background-color:#d7e5f1">
+                <h3><strong><i class="fa fa-home" style="font-size:23px"></i></strong> {{persona.direccion}}</h3>
+                <h3><strong><i class="fa fa-phone-square" style="font-size:23px"></i></strong> {{persona.telefono}}</h3>
+                <h3><strong>WEB:</strong> {{persona.web}}</h3>
+                  
+              </div>
+              <div class="col-4" style="background-color:#d7e5f1">
+                <h3><strong><i class="fa fa-linkedin-square" style="font-size:23px"></i></strong> {{persona.linkedin}}</h3>
+                    <h3><strong><i class="fa fa-envelope" style="font-size:23px"></i></strong> {{persona.mail}}</h3>
+              </div>
+          
+          
+          
+          
+          
+        </div>
+
+        <!-- <table class="sinBordes" class="table table-responsive-sm  table table-borderless" >
+          <thead class="ta" style=" vertical-align:middle;">
+            <tr>
+            <th scope="col"> <h1 >{{persona.nombre}}</h1></th>
+            <th scope="col"><h3><strong>Direcion:</strong> {{persona.direccion}}</h3></th>
+          </tr>
+          </thead>
+          <tbody style="background-color: #d7e5f1">
+          <tr *ngFor="let educacion of educaciones">
+          
+          <td >{{educacion.nombreInstitucion}}</td>
+        
+      </tbody>
+      </table> -->
+      </div>
+
+  </div>
+</div>
+<div class="mat-card" id="second-card"*ngFor="let persona of personas">
+  <div class=card-titles>
+      <div id="titulo-acerca" style="padding: 6px 50px 0px 0px;">
+          <h2>ACERCA DE</h2>
+      </div>
+      <div class="btn-edit" onclick="cambiar_Texto()">
+          <a href="#" class="btn-rigth">
+              <i class="fa fa-pen"> </i>
+          </a>
+      </div>
+      <div id="caja-acerca">
+          <p id="text-acerca">{{persona.acerca}}}</p>
+      </div>
+      <div>
+          <input id="" edit-acerca type="text" oninput="muFunction2(this.value)" style="display:none">
+      </div>
+  </div>
+</div>
+
+
+<button   mat-icon-button color="primary" (click)="openDialog()" type="button"  data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil fa-2x fa-lg">Modificar</i></button>
+

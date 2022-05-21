@@ -1,0 +1,355 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+
+body {
+    background: black  no-repeat fixed  ;
+    font-family: Georgia; 
+    background-image: url(/assets/images/2.jpg);
+    background-position:center top;   
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+  
+    margin: 0 100px 0 100px;
+   
+}
+body#documento-color {
+    background-color: rgb(200, 221, 233);
+    width: 30px;
+}
+
+.mat-card {
+   
+    border-radius: 12px;
+    margin: 20px 20px;
+    padding: 0px;
+    border: 1px;
+    border-style: solid;
+
+    
+    border-color: rgb(19, 232, 90);
+}
+
+.mat-card#first-card {
+    padding: 10;
+    border-color: #00358e;
+    background-color: rgb(245, 237, 233);
+}
+
+.mat-card#second-card {
+    border-color: #00358e;
+    text-align: center;
+}
+
+#titulo-acerca {
+    border-radius: 12px 12px 0px 0px;
+    border-color: #00358e;
+    height: 48px;
+    margin-top: -1px;
+    
+    
+    vertical-align:middle;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #00358e;
+    color: beige;
+    line-height:40px;
+    
+}
+
+#btn-add{
+   float: right;
+   justify-content: center;
+   align-items: center;
+   margin-right: 10px;
+   margin-top: 6px;
+  
+}
+
+div#profile-background {
+    display: flex;
+    z-index: 1;
+    
+    
+    
+}
+
+div#profile-background img {
+    
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    margin: -1px 0px 0px 0px;
+    
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -170px;
+    z-index: 1;
+    position: relative;
+    margin-left: 40px;
+
+
+}
+.profile-image:hover{
+    
+    transform: scale(1.1);
+    transition: transform .8s;
+    box-shadow: 0px 0px 2px 2px #ecbd9b;
+   
+}
+
+
+
+
+
+
+
+   
+
+
+
+
+div#info-actions {
+    display: flex;
+}
+
+div.s {
+    border-radius: 12px;
+    border-color: red;
+    margin: 0;
+    color: red;
+    border: 0.1em solid red;
+    padding: 10px;
+}
+
+img.tamaño {
+    width: 800px;
+    height: 200px;
+}
+
+#if-details img {
+    width: 75px;
+    height: 75px;
+    text-align: right;
+}
+
+ul li {
+    padding-bottom: 20px;
+}
+
+ul#if-details {
+    text-align: right;
+    list-style: none;
+    max-lines: 20px;
+    margin-top: -100px;
+}
+
+#info-actions button {
+    margin-right: 20px
+}
+
+.row ul {
+    text-align: justify;
+    list-style: none;
+}
+
+hr#linea {
+    height: 2px;
+    color: #00358e
+}
+
+#img-trabajo a img {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#second-card {
+    background-color: rgb(245, 237, 233);
+}
+
+#segunda-tarjeta {
+    margin: 6px 6px 8px 6px;
+    background: rgb(216, 230, 240);
+    border-radius: 12px 12px 12px 12px;
+    border: 1px solid;
+}
+
+#caja-acerca{
+    margin: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* cuadrados */
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+#tituloPerfil {
+    display: block;
+    font-size: 40px;
+    
+    font-weight: bold;
+  }
+#subtituloPerfil {
+    display: block;
+    font-size: 20px;
+    
+    
+  }
+
+
+.circles{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}

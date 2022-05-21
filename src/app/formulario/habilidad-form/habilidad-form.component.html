@@ -1,0 +1,34 @@
+
+<h1 mat-dialog-title>DATOS HABILIDADES</h1>
+<div mat-dialog-content style="font-size:14px">
+    <div class="container">
+    <form [formGroup]="habilidadForm">   
+        <div class="ref" >Ref: 0 a 20 Básico, 21 a 40 Principiante, 41 a 60 Intermedio, 61 a 80 Avanzado, 81 a 100 Experto </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre de la Habilidad</mat-label>
+            <input matInput placeholder="Ingrese Nombre de la Habilidad" formControlName="nombreHabilidad">
+            <mat-icon matSuffix>account_box</mat-icon>
+        </mat-form-field>
+        
+
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Nivel de Conocimiento</mat-label>
+            <mat-select formControlName="porcHabilidad">
+            <mat-option *ngFor="let nConocimiento of nConocimientos" [value]="nConocimiento.value" >
+                {{nConocimiento.viewValue}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+       
+          
+
+    </form>
+    </div>
+    <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+        <button mat-raised-button color="primary"primary (click)="agregarHabilidad()" [disabled]="habilidadForm.invalid">{{actionBtn}}</button>
+    </div>
+</div>   

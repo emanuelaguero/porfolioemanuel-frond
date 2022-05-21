@@ -1,0 +1,16 @@
+{
+    "nombre":"Agüero, Sergio Emanauel",
+    "direccion":"Pringles 1990",
+    "ocupacion":"Profesor Informatica",
+    "edad":35,
+    "fotoPerfil":"https://www.futuro.cl/wp-content/uploads/2019/05/7c23104bdf01ac249b1cc9de35ff550217adb476.jpg",
+    "fotoPortada":"https://th.bing.com/th/id/R.f11e624399e38cfb82eb32af8cf62021?rik=8%2brSbR9kGGun5g&riu=http%3a%2f%2fwww.solofondos.com%2fwp-content%2fuploads%2f2015%2f11%2fFondo-de-pantalla-Boreal-sunrise.jpg&ehk=MF93De83XAQYLAER92AVVyecBylHjfPukJwNwUSvphg%3d&risl=&pid=ImgRaw&r=0",
+    "Experiencia":[{
+        "empresa":"Hotel Diplomatic",
+        "puesto":"Help Desk",
+        "fechaInicio":"10/10/2012",
+        "fechaSalida":"10/10/2014",
+        "imagen":""
+    }]
+    
+    }

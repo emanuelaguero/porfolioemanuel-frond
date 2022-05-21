@@ -1,0 +1,79 @@
+
+
+
+<div class="mat-card" id="second-card">
+    <div class=card-titles id="taa-2">
+          <div id="titulo-acerca">
+            <h2 id="titulo-acerca" >HABILIDADES
+              
+              <button id="btn-add" mat-raised-button color="warn"(click)="openDialogHabilidad()"><mat-icon>add_circle_outline</mat-icon></button> 
+            </h2>
+            
+          </div>
+        <div class="btn-edit" onclick="cambiar_Texto()">
+            <a href="#" class="btn-rigth">
+                <i class="fa fa-pen"> </i>
+            </a>
+        </div>
+        
+        <div class="ref" >Ref: 0 a 20 Básico, 21 a 40 Principiante, 41 a 60 Intermedio, 61 a 80 Avanzado, 81 a 100 Experto </div>     
+        <div class="container" >
+
+         
+          <div class="row"   >
+            <div class="col-sm"*ngFor="let habilidad of habilidades">
+              <div class="container" id="box" >
+              <circle-progress
+              [percent]=habilidad.porcHabilidad
+              [subtitle]=habilidad.nombreHabilidad
+              [titleColor]="red"
+              [subtitleColor]="Black"
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="1"
+              [outerStrokeColor]="'#1e90ff'"
+              [innerStrokeColor]="'#6d71bc'"
+              [animation]="true"
+              [animationDuration]="5000"
+              [toFixed]=0
+              [titleFontSize]=20
+              [subtitleFontSize]=20
+                 
+              ></circle-progress>
+              <div id="box3"class="container"> 
+                Nivel: {{habilidad.nivelHabilidad}}
+              </div>
+              
+              </div>
+              <div id="box2"class="container">
+                <button  mat-icon-button color="primary" (click)="openEditHabilidad(habilidad)" type="button"  data-toggle="modal" data-target="#myModal"><mat-icon>create</mat-icon></button>
+              <button mat-icon-button color="accent" (click)="eliminarHabilidad(habilidad.idHabilidad)" type="button"  data-toggle="modal" ><mat-icon>delete</mat-icon></button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+       
+    
+             
+
+
+           
+         
+
+
+
+
+
+
+        
+        </div>
+       
+</div>
+
+
+    
+  
+
+

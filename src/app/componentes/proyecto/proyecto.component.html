@@ -1,0 +1,59 @@
+
+
+  <div class="mat-card" id="second-card">
+    <div class=card-titles>
+          <div id="titulo-acerca">
+            <h2 id="titulo-acerca">PROYECTOS 
+              
+              <button id="btn-add" mat-raised-button color="warn"(click)="openDialogProyecto()"><mat-icon>add_circle_outline</mat-icon></button> 
+            </h2>
+            
+          </div>
+        <div class="btn-edit" onclick="cambiar_Texto()">
+            <a href="#" class="btn-rigth">
+                <i class="fa fa-pen"> </i>
+            </a>
+        </div> 
+        <div class="table-responsive-sm" style="vertical-align:middle; margin: 6px ">
+          <table  class="sinBordes" class="table table-responsive-sm  table table-borderless" >
+            <thead class="ta" style=" vertical-align:middle;
+            background:linear-gradient(top, #a5c9e7, #68cff1) !important;
+            background:-webkit-linear-gradient(top, #a5c9e7, #68cff1)!important;
+            background:-moz-linear-gradient(top, #a5c9e7, #68cff1)!important;
+            background:-o-linear-gradient(top, #a5c9e7, #68cff1)!important;
+            background:-ms-linear-gradient(top, #a5c9e7, rgb(245, 237, 233));">
+              
+              <tr >
+                  <th scope="col">Proyecto</th>
+                 
+                  <th scope="col">Descripcion del Proyecto</th>
+                  <th scope="col">URL Proyecto </th>
+                  <th scope="col">Editar</th>
+                  <th scope="col">Eliminar</th>
+             </tr>
+            
+            </thead>
+            <tbody style="background-color: #d7e5f1">
+            <tr *ngFor="let proyecto of proyectos">
+             
+            <td >{{proyecto.nombreProyecto}}</td>
+            <td>{{proyecto.descProyecto}}</td>
+            <td><img src="{{proyecto.urlProyecto}}" width="50px" height="50px"></td>
+            
+            
+            
+            <td><button  mat-icon-button color="primary" (click)="openEditProyecto(proyecto)" type="button"  data-toggle="modal" data-target="#myModal"><mat-icon>create</mat-icon></button></td>
+            <td><button mat-icon-button color="accent" (click)="eliminarProyecto(proyecto.idProyecto)" type="button"  data-toggle="modal" ><mat-icon>delete</mat-icon></button></td>
+           
+          
+        </tbody> 
+        </table>
+        </div>
+        <div>
+            <input id="" edit-acerca type="text" oninput="muFunction2(this.value)" style="display:none">
+        </div>
+    </div>
+  </div>
+  
+
+
